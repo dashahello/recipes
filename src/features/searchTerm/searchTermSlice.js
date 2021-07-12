@@ -30,7 +30,7 @@ import { createSlice } from '@reduxjs/toolkit';
 // }
 
 // With createSlice()
-const options = {
+export const searchTermSlice = createSlice({
   name: 'searchTerm',
   initialState: '',
   reducers: {
@@ -41,9 +41,11 @@ const options = {
       return '';
     }
   }
-};
+});
 
-export const searchTermSlice = createSlice(options);
+//export const { setSearchTerm, clearSearchTerm } = searchTermSlice.actions;
+
+export default searchTermSlice.reducer;
 
 // Selector
 // A selector function, or selector, is a pure function that selects data from the Redux store’s state

@@ -39,7 +39,7 @@ import { selectSearchTerm } from '../searchTerm/searchTermSlice.js';
 
 // With createStore()
 
-const options = {
+export const allRecipesSlice = createSlice({
   name: 'allRecipes',
   initialState: allRecipesData,
   reducers: {
@@ -53,9 +53,11 @@ const options = {
       return [...state, action.payload];
     }
   }
-};
+});
 
-export const allRecipesSlice = createSlice(options);
+//export const allRecipesSlice = createSlice(options);
+
+export default allRecipesSlice.reducer;
 
 // Selectors
 export const selectAllRecipes = (state) => state.allRecipes;
